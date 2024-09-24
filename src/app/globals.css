@@ -3,21 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-desaturated-cyan: hsl(180, 29%, 50%);
+  --color-grayish-background: hsl(100, 52%, 96%);
+  --color-grayish-filter: hsl(180, 31%, 95%);
+  --color-grayish-cyan: hsl(180, 8%, 52%);
+  --color-dark-grayish-cyan: hsl(180, 14%, 20%);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
 }
 
 @layer utilities {
