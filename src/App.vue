@@ -61,6 +61,7 @@ function filterJobList() {
 .outer-container {
   background-color: var(--color-bg-light-grayish);
   position: relative;
+  min-height: 100dvh;
 }
 
 .container-header {
@@ -87,5 +88,23 @@ function filterJobList() {
 
 .invisible {
   visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-header {
+    background-image: url('assets/images/bg-header-desktop.svg');
+    width: 100%;
+  }
+
+  .inner-container {
+    width: 80%;
+    max-width: 1024px;
+  }
 }
 </style>

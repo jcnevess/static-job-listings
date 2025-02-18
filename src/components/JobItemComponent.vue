@@ -5,27 +5,29 @@ const emit = defineEmits(['addTerm'])
 
 <template>
   <div class="card-job shadowed-box" :class="{ 'card-featured': job.featured }">
-    <div class="card-photo">
-      <img :src="job.logo" :alt="job.company" />
-    </div>
-    <div class="card-main">
-      <div class="card-header">
-        <div class="card-company">{{ job.company }}</div>
-        <div class="card-badges">
-          <div class="card-badge badge-new" v-show="job.new">new!</div>
-          <div class="card-badge badge-featured" v-show="job.featured">featured</div>
+    <div class="card-wrapper">
+      <div class="card-photo">
+        <img :src="job.logo" :alt="job.company" />
+      </div>
+      <div class="card-main">
+        <div class="card-header">
+          <div class="card-company">{{ job.company }}</div>
+          <div class="card-badges">
+            <div class="card-badge badge-new" v-show="job.new">new!</div>
+            <div class="card-badge badge-featured" v-show="job.featured">featured</div>
+          </div>
+        </div>
+        <div class="card-position">{{ job.position }}</div>
+        <div class="card-infos">
+          <div class="card-info">{{ job.postedAt }}</div>
+          &bull;
+          <div class="card-info">{{ job.contract }}</div>
+          &bull;
+          <div class="card-info">{{ job.location }}</div>
         </div>
       </div>
-
-      <div class="card-position">{{ job.position }}</div>
-      <div class="card-infos">
-        <div class="card-info">{{ job.postedAt }}</div>
-        &bull;
-        <div class="card-info">{{ job.contract }}</div>
-        &bull;
-        <div class="card-info">{{ job.location }}</div>
-      </div>
     </div>
+
     <div class="card-tags">
       <div class="card-tag" @click="emit('addTerm', job.role)">{{ job.role }}</div>
       <div class="card-tag" @click="emit('addTerm', job.level)">{{ job.level }}</div>
@@ -137,5 +139,30 @@ const emit = defineEmits(['addTerm'])
   background-color: var(--color-light-grayish-cyan);
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .card-job {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-wrapper {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .card-photo {
+    position: relative;
+    top: unset;
+  }
+
+  .card-tags {
+    border: none;
+    padding-top: 0;
+    justify-content: flex-end;
+  }
 }
 </style>
