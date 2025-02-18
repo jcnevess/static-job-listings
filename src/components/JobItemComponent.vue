@@ -117,6 +117,12 @@ const emit = defineEmits(['addTerm'])
 .card-position {
   text-transform: capitalize;
   color: var(--color-darkest-grayish-cyan);
+  cursor: pointer;
+}
+
+.card-position:hover,
+.card-position:active {
+  color: var(--color-dessatured-dark-cyan);
 }
 
 .card-infos {
@@ -139,6 +145,13 @@ const emit = defineEmits(['addTerm'])
   background-color: var(--color-light-grayish-cyan);
   padding: 0.5rem;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-tag:hover,
+.card-tag:active {
+  background-color: var(--color-dessatured-dark-cyan);
+  color: white;
 }
 
 @media (min-width: 768px) {

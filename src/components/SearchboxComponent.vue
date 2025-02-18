@@ -53,6 +53,12 @@ const emit = defineEmits(['deleteOne', 'deleteAll'])
   color: white;
   background-color: var(--color-dessatured-dark-cyan);
   padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.pill-close:hover,
+.pill-close:active {
+  background-color: var(--color-darkest-grayish-cyan);
 }
 
 .clear {
@@ -61,5 +67,12 @@ const emit = defineEmits(['deleteOne', 'deleteAll'])
   color: var(--color-dark-grayish-cyan);
   text-transform: capitalize;
   padding: 0.5rem;
+  cursor: pointer;
+}
+
+.clear:hover,
+.clear:active {
+  text-decoration: underline;
+  color: var(--color-dessatured-dark-cyan);
 }
 </style>
