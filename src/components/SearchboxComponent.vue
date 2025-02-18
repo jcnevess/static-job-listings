@@ -19,13 +19,13 @@ const emit = defineEmits(['deleteOne', 'deleteAll'])
 .searchbox {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 30%;
+  grid-template-columns: 1fr 25%;
   padding: 1rem;
 }
 
 .shadowed-box {
   border-radius: 5px;
-  box-shadow: 5px 5px 5px var(--color-dessatured-dark-cyan);
+  box-shadow: 0px 4px 20px -10px var(--color-dessatured-dark-cyan);
   background-color: white;
 }
 
@@ -60,5 +60,6 @@ const emit = defineEmits(['deleteOne', 'deleteAll'])
   font-weight: bold;
   color: var(--color-dark-grayish-cyan);
   text-transform: capitalize;
+  padding: 0.5rem;
 }
 </style>

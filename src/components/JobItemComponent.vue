@@ -4,7 +4,7 @@ const emit = defineEmits(['addTerm'])
 </script>
 
 <template>
-  <div class="card-job shadowed-box">
+  <div class="card-job shadowed-box" :class="{ 'card-featured': job.featured }">
     <div class="card-photo">
       <img :src="job.logo" :alt="job.company" />
     </div>
@@ -47,18 +47,21 @@ const emit = defineEmits(['addTerm'])
 <style scoped>
 .shadowed-box {
   border-radius: 5px;
-  box-shadow: 5px 5px 5px var(--color-dessatured-dark-cyan);
+  box-shadow: 0px 4px 20px -10px var(--color-dessatured-dark-cyan);
   background-color: white;
 }
 
 .card-job {
   font-weight: bold;
-  border-left: 5px solid var(--color-dessatured-dark-cyan);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   position: relative;
   padding: 2rem 1rem 1.5rem;
+}
+
+.card-featured {
+  border-left: 5px solid var(--color-dessatured-dark-cyan);
 }
 
 .card-photo {
