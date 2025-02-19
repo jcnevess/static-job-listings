@@ -1,13 +1,17 @@
 <script setup>
+import { computed } from 'vue'
+
 const { job } = defineProps(['job'])
 const emit = defineEmits(['addTerm'])
+
+const jobLogo = computed(() => new URL(`/src/assets/images/${job.logo}`, import.meta.url).href)
 </script>
 
 <template>
   <div class="card-job shadowed-box" :class="{ 'card-featured': job.featured }">
     <div class="card-wrapper">
       <div class="card-photo">
-        <img :src="job.logo" :alt="job.company" />
+        <img :src="jobLogo" :alt="job.company" />
       </div>
       <div class="card-main">
         <div class="card-header">

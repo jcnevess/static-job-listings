@@ -47,4 +47,5 @@ Desktop
 ### What I learned
 
 In this project I dove into reactive state management using vue.
-I also learnt to import data and exercised event handling.
+I also learned to import data and exercised event handling.
+After a tough battle, I learned how to make Vite serve the static images aswell.
